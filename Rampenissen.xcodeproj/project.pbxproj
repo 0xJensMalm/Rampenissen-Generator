@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B40116C12B206342005221B0 /* RampenissenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116C02B206342005221B0 /* RampenissenApp.swift */; };
+		B40116C32B206342005221B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116C22B206342005221B0 /* ContentView.swift */; };
+		B40116C52B206343005221B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40116C42B206343005221B0 /* Assets.xcassets */; };
+		B40116C82B206343005221B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40116C72B206343005221B0 /* Preview Assets.xcassets */; };
+		B40116D22B206343005221B0 /* RampenissenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116D12B206343005221B0 /* RampenissenTests.swift */; };
+		B40116DC2B206343005221B0 /* RampenissenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116DB2B206343005221B0 /* RampenissenUITests.swift */; };
+		B40116DE2B206343005221B0 /* RampenissenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116DD2B206343005221B0 /* RampenissenUITestsLaunchTests.swift */; };
+		B40116EB2B207D23005221B0 /* Data.geojson in Resources */ = {isa = PBXBuildFile; fileRef = B40116EA2B206595005221B0 /* Data.geojson */; };
+		B40116EF2B20A899005221B0 /* savageData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = B40116EE2B208DEF005221B0 /* savageData.geojson */; };
+		B40116F12B234148005221B0 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116F02B234148005221B0 /* IAPManager.swift */; };
+		B40116F32B246E91005221B0 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116F22B246E91005221B0 /* NotificationSettingsView.swift */; };
+		B40116F72B24709E005221B0 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116F62B24709E005221B0 /* GlobalHelpers.swift */; };
+		B40116F92B24765C005221B0 /* PurchasePromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116F82B24765C005221B0 /* PurchasePromptView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B40116CE2B206343005221B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B40116B52B206342005221B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B40116BC2B206342005221B0;
+			remoteInfo = Rampenissen;
+		};
+		B40116D82B206343005221B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B40116B52B206342005221B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B40116BC2B206342005221B0;
+			remoteInfo = Rampenissen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B40116BD2B206342005221B0 /* Rampenissen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rampenissen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40116C02B206342005221B0 /* RampenissenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampenissenApp.swift; sourceTree = "<group>"; };
+		B40116C22B206342005221B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B40116C42B206343005221B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B40116C72B206343005221B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B40116CD2B206343005221B0 /* RampenissenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RampenissenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40116D12B206343005221B0 /* RampenissenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampenissenTests.swift; sourceTree = "<group>"; };
+		B40116D72B206343005221B0 /* RampenissenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RampenissenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40116DB2B206343005221B0 /* RampenissenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampenissenUITests.swift; sourceTree = "<group>"; };
+		B40116DD2B206343005221B0 /* RampenissenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampenissenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B40116EA2B206595005221B0 /* Data.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Data.geojson; sourceTree = "<group>"; };
+		B40116EE2B208DEF005221B0 /* savageData.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = savageData.geojson; sourceTree = "<group>"; };
+		B40116F02B234148005221B0 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		B40116F22B246E91005221B0 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
+		B40116F62B24709E005221B0 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		B40116F82B24765C005221B0 /* PurchasePromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePromptView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B40116BA2B206342005221B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40116CA2B206343005221B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40116D42B206343005221B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B40116B42B206342005221B0 = {
+			isa = PBXGroup;
+			children = (
+				B40116BF2B206342005221B0 /* Rampenissen */,
+				B40116D02B206343005221B0 /* RampenissenTests */,
+				B40116DA2B206343005221B0 /* RampenissenUITests */,
+				B40116BE2B206342005221B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B40116BE2B206342005221B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B40116BD2B206342005221B0 /* Rampenissen.app */,
+				B40116CD2B206343005221B0 /* RampenissenTests.xctest */,
+				B40116D72B206343005221B0 /* RampenissenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B40116BF2B206342005221B0 /* Rampenissen */ = {
+			isa = PBXGroup;
+			children = (
+				B40116F82B24765C005221B0 /* PurchasePromptView.swift */,
+				B40116F62B24709E005221B0 /* GlobalHelpers.swift */,
+				B40116F22B246E91005221B0 /* NotificationSettingsView.swift */,
+				B40116C02B206342005221B0 /* RampenissenApp.swift */,
+				B40116C22B206342005221B0 /* ContentView.swift */,
+				B40116F02B234148005221B0 /* IAPManager.swift */,
+				B40116C42B206343005221B0 /* Assets.xcassets */,
+				B40116C62B206343005221B0 /* Preview Content */,
+				B40116EA2B206595005221B0 /* Data.geojson */,
+				B40116EE2B208DEF005221B0 /* savageData.geojson */,
+			);
+			path = Rampenissen;
+			sourceTree = "<group>";
+		};
+		B40116C62B206343005221B0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B40116C72B206343005221B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B40116D02B206343005221B0 /* RampenissenTests */ = {
+			isa = PBXGroup;
+			children = (
+				B40116D12B206343005221B0 /* RampenissenTests.swift */,
+			);
+			path = RampenissenTests;
+			sourceTree = "<group>";
+		};
+		B40116DA2B206343005221B0 /* RampenissenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B40116DB2B206343005221B0 /* RampenissenUITests.swift */,
+				B40116DD2B206343005221B0 /* RampenissenUITestsLaunchTests.swift */,
+			);
+			path = RampenissenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B40116BC2B206342005221B0 /* Rampenissen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40116E12B206343005221B0 /* Build configuration list for PBXNativeTarget "Rampenissen" */;
+			buildPhases = (
+				B40116B92B206342005221B0 /* Sources */,
+				B40116BA2B206342005221B0 /* Frameworks */,
+				B40116BB2B206342005221B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rampenissen;
+			productName = Rampenissen;
+			productReference = B40116BD2B206342005221B0 /* Rampenissen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B40116CC2B206343005221B0 /* RampenissenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40116E42B206343005221B0 /* Build configuration list for PBXNativeTarget "RampenissenTests" */;
+			buildPhases = (
+				B40116C92B206343005221B0 /* Sources */,
+				B40116CA2B206343005221B0 /* Frameworks */,
+				B40116CB2B206343005221B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B40116CF2B206343005221B0 /* PBXTargetDependency */,
+			);
+			name = RampenissenTests;
+			productName = RampenissenTests;
+			productReference = B40116CD2B206343005221B0 /* RampenissenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B40116D62B206343005221B0 /* RampenissenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40116E72B206343005221B0 /* Build configuration list for PBXNativeTarget "RampenissenUITests" */;
+			buildPhases = (
+				B40116D32B206343005221B0 /* Sources */,
+				B40116D42B206343005221B0 /* Frameworks */,
+				B40116D52B206343005221B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B40116D92B206343005221B0 /* PBXTargetDependency */,
+			);
+			name = RampenissenUITests;
+			productName = RampenissenUITests;
+			productReference = B40116D72B206343005221B0 /* RampenissenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B40116B52B206342005221B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B40116BC2B206342005221B0 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					B40116CC2B206343005221B0 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = B40116BC2B206342005221B0;
+					};
+					B40116D62B206343005221B0 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = B40116BC2B206342005221B0;
+					};
+				};
+			};
+			buildConfigurationList = B40116B82B206342005221B0 /* Build configuration list for PBXProject "Rampenissen" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B40116B42B206342005221B0;
+			productRefGroup = B40116BE2B206342005221B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B40116BC2B206342005221B0 /* Rampenissen */,
+				B40116CC2B206343005221B0 /* RampenissenTests */,
+				B40116D62B206343005221B0 /* RampenissenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B40116BB2B206342005221B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40116EB2B207D23005221B0 /* Data.geojson in Resources */,
+				B40116C82B206343005221B0 /* Preview Assets.xcassets in Resources */,
+				B40116EF2B20A899005221B0 /* savageData.geojson in Resources */,
+				B40116C52B206343005221B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40116CB2B206343005221B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40116D52B206343005221B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B40116B92B206342005221B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40116F32B246E91005221B0 /* NotificationSettingsView.swift in Sources */,
+				B40116F12B234148005221B0 /* IAPManager.swift in Sources */,
+				B40116F72B24709E005221B0 /* GlobalHelpers.swift in Sources */,
+				B40116C32B206342005221B0 /* ContentView.swift in Sources */,
+				B40116C12B206342005221B0 /* RampenissenApp.swift in Sources */,
+				B40116F92B24765C005221B0 /* PurchasePromptView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40116C92B206343005221B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40116D22B206343005221B0 /* RampenissenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40116D32B206343005221B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40116DE2B206343005221B0 /* RampenissenUITestsLaunchTests.swift in Sources */,
+				B40116DC2B206343005221B0 /* RampenissenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B40116CF2B206343005221B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B40116BC2B206342005221B0 /* Rampenissen */;
+			targetProxy = B40116CE2B206343005221B0 /* PBXContainerItemProxy */;
+		};
+		B40116D92B206343005221B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B40116BC2B206342005221B0 /* Rampenissen */;
+			targetProxy = B40116D82B206343005221B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B40116DF2B206343005221B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B40116E02B206343005221B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B40116E22B206343005221B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rampenissen/Preview Content\"";
+				DEVELOPMENT_TEAM = A754AD89WQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Rampenissen;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Japps.Rampenissen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B40116E32B206343005221B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rampenissen/Preview Content\"";
+				DEVELOPMENT_TEAM = A754AD89WQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Rampenissen;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Japps.Rampenissen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B40116E52B206343005221B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Japps.RampenissenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rampenissen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rampenissen";
+			};
+			name = Debug;
+		};
+		B40116E62B206343005221B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Japps.RampenissenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rampenissen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rampenissen";
+			};
+			name = Release;
+		};
+		B40116E82B206343005221B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Japps.RampenissenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rampenissen;
+			};
+			name = Debug;
+		};
+		B40116E92B206343005221B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Japps.RampenissenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rampenissen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B40116B82B206342005221B0 /* Build configuration list for PBXProject "Rampenissen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40116DF2B206343005221B0 /* Debug */,
+				B40116E02B206343005221B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40116E12B206343005221B0 /* Build configuration list for PBXNativeTarget "Rampenissen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40116E22B206343005221B0 /* Debug */,
+				B40116E32B206343005221B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40116E42B206343005221B0 /* Build configuration list for PBXNativeTarget "RampenissenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40116E52B206343005221B0 /* Debug */,
+				B40116E62B206343005221B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40116E72B206343005221B0 /* Build configuration list for PBXNativeTarget "RampenissenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40116E82B206343005221B0 /* Debug */,
+				B40116E92B206343005221B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B40116B52B206342005221B0 /* Project object */;
+}
