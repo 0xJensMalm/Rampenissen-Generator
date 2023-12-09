@@ -10,9 +10,7 @@ struct Activities: Codable {
 struct ContentView: View {
     @ObservedObject var globalSettings = GlobalSettings.shared
 
-    @State private var isMinActive = false
-    @State private var isMediumActive = false
-    @State private var isLongActive = false
+    @State private var selectedDuration = "1 min"
     @State private var randomActivityDescription = ""
     @State private var isSavageModeActive = false
     @State private var isButtonPressed = false
@@ -48,13 +46,13 @@ struct ContentView: View {
                         .padding()
 
                     // Toggles for activity duration
-                    Toggle("1 min", isOn: $isMinActive)
-                        .toggleStyle(ColoredToggleStyle(label: "1 min", onColor: .green, offColor: .gray))
-                    Toggle("5 min", isOn: $isMediumActive)
-                        .toggleStyle(ColoredToggleStyle(label: "5 min", onColor: .yellow, offColor: .gray))
-                    Toggle("10+ min", isOn: $isLongActive)
-                        .toggleStyle(ColoredToggleStyle(label: "10+ min", onColor: .red, offColor: .gray))
-
+                    Picker("Duration", selection: $selectedDuration) {
+                                            Text("1 min").tag("1 min")
+                                            Text("5 min").tag("5 min")
+                                            Text("10+ min").tag("10+ min")
+                                        }
+                                        .pickerStyle(SegmentedPickerStyle())
+                                        .padding()
                     // Main Button
                     Button(action: {
                         generateActivity()
@@ -106,18 +104,21 @@ struct ContentView: View {
     }  // End of ContentView
 
     private func generateActivity() {
-        DispatchQueue.main.async {
-            if let activities = loadActivities() {
-                var allActivities: [String] = []
-                if isMinActive {
-                    allActivities += activities.Min
-                }
-                if isMediumActive {
-                    allActivities += activities.Medium
-                }
-                if isLongActive {
-                    allActivities += activities.Long
-                }
+           DispatchQueue.main.async {
+               if let activities = loadActivities() {
+                   var allActivities: [String] = []
+
+                   // Use selectedDuration to determine which activities to fetch
+                   switch selectedDuration {
+                   case "1 min":
+                       allActivities += activities.Min
+                   case "5 min":
+                       allActivities += activities.Medium
+                   case "10+ min":
+                       allActivities += activities.Long
+                   default:
+                       break
+                   }
 
                 if allActivities.isEmpty {
                     self.randomActivityDescription = "Vennligst velg hvor mye tid du gidder å bruke"
@@ -182,32 +183,6 @@ struct PlainButtonStyle: ButtonStyle {
         configuration.label
     }
 }
-
-struct ColoredToggleStyle: ToggleStyle {
-    var label: String
-    var onColor: Color
-    var offColor: Color
-
-    func makeBody(configuration: Configuration) -> some View {
-        HStack {
-            Text(label)
-                .foregroundColor(configuration.isOn ? onColor : offColor)
-            Spacer()
-            Rectangle()
-                .foregroundColor(configuration.isOn ? onColor : offColor)
-                .frame(width: 50, height: 30)
-                .overlay(
-                    Circle()
-                        .foregroundColor(.white)
-                        .padding(.all, 3)
-                        .offset(x: configuration.isOn ? 10 : -10, y: 0)
-                )
-                .onTapGesture { configuration.isOn.toggle() }
-        }
-        .padding(.horizontal)
-    }
-}
-
 // MARK: - Custom Navigation Bar
 
 struct CustomNavigationBar: View {
