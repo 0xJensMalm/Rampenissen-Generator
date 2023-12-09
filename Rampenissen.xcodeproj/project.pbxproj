@@ -20,6 +20,7 @@
 		B40116F32B246E91005221B0 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116F22B246E91005221B0 /* NotificationSettingsView.swift */; };
 		B40116F72B24709E005221B0 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116F62B24709E005221B0 /* GlobalHelpers.swift */; };
 		B40116F92B24765C005221B0 /* PurchasePromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116F82B24765C005221B0 /* PurchasePromptView.swift */; };
+		B40116FB2B250DE8005221B0 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40116FA2B250DE8005221B0 /* PopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		B40116F22B246E91005221B0 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
 		B40116F62B24709E005221B0 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		B40116F82B24765C005221B0 /* PurchasePromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePromptView.swift; sourceTree = "<group>"; };
+		B40116FA2B250DE8005221B0 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		B40116FC2B251063005221B0 /* todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = todo.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +114,13 @@
 				B40116F22B246E91005221B0 /* NotificationSettingsView.swift */,
 				B40116C02B206342005221B0 /* RampenissenApp.swift */,
 				B40116C22B206342005221B0 /* ContentView.swift */,
+				B40116FA2B250DE8005221B0 /* PopUp.swift */,
 				B40116F02B234148005221B0 /* IAPManager.swift */,
 				B40116C42B206343005221B0 /* Assets.xcassets */,
 				B40116C62B206343005221B0 /* Preview Content */,
 				B40116EA2B206595005221B0 /* Data.geojson */,
 				B40116EE2B208DEF005221B0 /* savageData.geojson */,
+				B40116FC2B251063005221B0 /* todo.md */,
 			);
 			path = Rampenissen;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				B40116F32B246E91005221B0 /* NotificationSettingsView.swift in Sources */,
 				B40116F12B234148005221B0 /* IAPManager.swift in Sources */,
 				B40116F72B24709E005221B0 /* GlobalHelpers.swift in Sources */,
+				B40116FB2B250DE8005221B0 /* PopUp.swift in Sources */,
 				B40116C32B206342005221B0 /* ContentView.swift in Sources */,
 				B40116C12B206342005221B0 /* RampenissenApp.swift in Sources */,
 				B40116F92B24765C005221B0 /* PurchasePromptView.swift in Sources */,

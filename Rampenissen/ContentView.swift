@@ -17,12 +17,14 @@ struct ContentView: View {
     @State private var showCustomAlert = false
     @State private var showPurchasePrompt = false
     @State private var showNotificationSettings = false
+    @State private var showPopUp = false
+
 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 // Background image
-                Image(isSavageModeActive ? "SavageBackground" : "background")
+                Image(isSavageModeActive ? "SavageBackground" : "dopeBG")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width)
@@ -30,11 +32,11 @@ struct ContentView: View {
 
                 VStack {
                     // Title Image
-                    Image("generatortitle")
+                    Image("dopeTitle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: geometry.size.width)
-                        .padding(.top, -10)
+                        .padding(.top, 10)
 
                     Spacer()
 
@@ -57,11 +59,11 @@ struct ContentView: View {
                     Button(action: {
                         generateActivity()
                     }) {
-                        Image(isSavageModeActive ? "SavageButton" : "bigredbutton")
+                        Image(isSavageModeActive ? "savageButton" : "vectorButton")
                             .resizable()
                             .scaledToFit()
                             .frame(width: geometry.size.width * 0.8)
-                            .scaleEffect(isButtonPressed ? 0.85 : 1.0)
+                            .scaleEffect(isButtonPressed ? 0.1 : 1.0)
                     }
                     .padding(.bottom)
                     .buttonStyle(PlainButtonStyle())
@@ -190,65 +192,96 @@ struct CustomNavigationBar: View {
     @Binding var isSavageModeActive: Bool
     @Binding var showPurchasePrompt: Bool
     @Binding var showNotificationSettings: Bool
-    var reminderSet: Bool // Changed to regular Bool
-    var selectedTime: Date // Changed to regular Date
+    var reminderSet: Bool
+    var selectedTime: Date
+    @State private var showThankYouAlert = false
 
     var body: some View {
-        GeometryReader { geometry in
-            HStack {
-                Spacer(minLength: geometry.size.width * 0.25 - 24)
-                
-                // Savage mode toggle button
+        HStack {
+            Spacer()
+            
+            // Savage mode toggle button
+            VStack {
+                Text(isSavageModeActive ? "Savage-mode" : "")
+                    .font(.caption)
+                    .foregroundColor(.orange)
+                    .frame(height: 20) // Fixed frame height to avoid pushing the icon
                 Button(action: {
-                    if isProVersionPurchased {
-                        isSavageModeActive.toggle()
-                    } else {
-                        showPurchasePrompt = true
-                    }
+                    isSavageModeActive.toggle()
                 }) {
                     Image(systemName: isSavageModeActive ? "flame.fill" : "flame")
                         .foregroundColor(isSavageModeActive ? .orange : .white)
                         .imageScale(.large)
                 }
-
-                Spacer()
-
-                // Coffee icon (Placeholder for future functionality)
-                Button(action: {
-                    // Future action for donation page or in-game purchase
-                }) {
-                    Image(systemName: "cup.and.saucer.fill")
-                        .imageScale(.large)
-                }
-
-                Spacer()
-
-                // Bell icon for notifications
+            }
+            .frame(width: UIScreen.main.bounds.width / 4)
+            
+            Spacer()
+            
+            // Coffee icon (for future functionality)
+            VStack {
+                Text(isProVersionPurchased ? "PRO" : "")
+                    .font(.caption)
+                    .foregroundColor(.orange)
+                    .frame(height: 20) // Fixed frame height to avoid pushing the icon
                 Button(action: {
                     if isProVersionPurchased {
-                        showNotificationSettings = true
+                        // Show thank you message
+                        self.showThankYouAlert = true
                     } else {
+                        // Show purchase prompt
                         showPurchasePrompt = true
                     }
+                }) {
+                    Image(systemName: "cup.and.saucer.fill")
+                        .foregroundColor(isProVersionPurchased ? .orange : .white)
+                        .imageScale(.large)
+                }
+            }
+            .alert(isPresented: $showThankYouAlert) {
+                Alert(
+                    title: Text("Tusen takk!"),
+                    message: Text("Takk for at du støtter appen. God jul!."),
+                    dismissButton: .default(Text("Selv takk!"))
+                )
+            }
+            .frame(width: UIScreen.main.bounds.width / 4)
+
+            Spacer()
+
+            
+            // Bell icon for notifications
+            VStack(spacing: 0) {
+                if reminderSet {
+                    Text(GlobalSettings.reminderTimeText(from: selectedTime))
+                        .font(.caption)
+                        .foregroundColor(.orange)
+                } else {
+                    Spacer().frame(height: 20) // Keep space consistent
+                }
+
+                Button(action: {
+                    // Trigger the display of the notification settings
+                    showNotificationSettings.toggle()
                 }) {
                     Image(systemName: "bell.fill")
                         .foregroundColor(reminderSet ? .orange : .white)
                         .imageScale(.large)
-                    if reminderSet {
-                        Text(GlobalSettings.reminderTimeText(from: selectedTime))
-                            .foregroundColor(.white)
-
-                    }
                 }
-
-                Spacer(minLength: geometry.size.width * 0.25 - 24)
             }
-            .padding()
-            .background(Color.black)
-            .foregroundColor(.white)
+            .frame(width: UIScreen.main.bounds.width / 4)
+            
+            Spacer()
         }
+        .padding([.top, .horizontal])
+        .background(Color.black)
+        .foregroundColor(.white)
+        .frame(maxWidth: .infinity, maxHeight: 60, alignment: .bottom) // Set a fixed height for the navigation bar
+        .edgesIgnoringSafeArea(.bottom) // Ensuring it stays at the bottom across all devices
     }
 }
+
+
 
 // MARK: - ContentView Previews
 

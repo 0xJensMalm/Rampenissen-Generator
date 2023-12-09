@@ -1,4 +1,4 @@
-//
+
 //  NotificationSettingsView.swift
 //  Rampenissen
 //
@@ -71,8 +71,8 @@ struct NotificationSettingsView: View {
 
   private func scheduleDailyNotification(at time: Date) {
     let content = UNMutableNotificationContent()
-    content.title = "Remember Rampenissen"
-    content.body = "It's time for today's activity!"
+    content.title = "Husk å rigge rampenissen"
+    content.body = "Bruk rampenissen appen for ideer!"
     content.sound = UNNotificationSound.default
 
     var dateComponents = Calendar.current.dateComponents([.hour, .minute], from: time)
