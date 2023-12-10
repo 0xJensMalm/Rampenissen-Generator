@@ -9,7 +9,6 @@ struct Activities: Codable {
 
 struct ContentView: View {
     @ObservedObject var globalSettings = GlobalSettings.shared
-
     @State private var selectedDuration = "1 min"
     @State private var randomActivityDescription = ""
     @State private var isSavageModeActive = false
